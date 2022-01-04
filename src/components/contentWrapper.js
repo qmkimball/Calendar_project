@@ -2,14 +2,10 @@ import React from 'react';
 
 import CalendarWrapper from './calendarWrapper';
 
-export default function contentWrapper() {
+export default function contentWrapper(props) {
     return(
-        <div>
-            <h1> Content </h1>
-            <CalendarWrapper />
-            <CalendarWrapper />
-            <CalendarWrapper />
-            <CalendarWrapper />
+        <div className="content-wrapper"> 
+            <CalendarWrapper month={props.month} />
         </div>
     )
 }

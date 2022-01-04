@@ -33,14 +33,14 @@ export default class App extends Component {
   }
 
   calculateDateData() {
-    const now = new Date(2022, 0);
+    const now = new Date(2022,0);
     const month = this.monthList[now.getMonth()]
     const year = now.getFullYear()
     return {month, year}
   }
 
   componentDidMount() {
-    fetch("http://127.0.0.1:5000/month/get")
+    fetch("https://api-calendar-qmk.herokuapp.com/month/get")
     .then((response) => response.json())
     .then((data) => { 
       this.setState({
@@ -72,8 +72,8 @@ export default class App extends Component {
           monthName={this.state.month.name}
           handleMonthChange={this.handleMonthChange}
         />
-        <ContentWrapper />
-        <Footer />
+        <ContentWrapper month={this.state.month} />
+        <Footer monthYear={this.state.monthData.monthYear} />
         
       </div>
     );

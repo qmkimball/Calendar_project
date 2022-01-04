@@ -1,0 +1,66 @@
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 15px;
+
+    .button {
+        color: rgb(155, 155, 155);
+        font-family: 'montserrat';
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+        
+    }
+    
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.content-wrapper {
+    display: flex;
+    font-size: 1.5rem;
+    
+
+    
+
+    .calendar-wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        .day-of-week {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar-box {
+            color: black;
+            border: 1px solid lightpink;
+        
+            textarea {
+                grid-row: 2;
+                grid-column: 1/ -1;
+                background-color: transparent;
+                resize: none;
+            }
+            .overflow {
+                color: white;
+            }
+        }
+        
+    }
+}
+
+
+
+
